@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_order/pages/details.dart';
 import 'package:food_order/widget/widget_support.dart';
 
 class Home extends StatefulWidget {
@@ -53,25 +54,30 @@ bool icecream=false, pizza=false, salad=false, burger=false;
                 scrollDirection: Axis.horizontal,
                  child: Row(
                   children: [
-                      Container(
-                        margin: EdgeInsets.all(4),
-                        child: Material(
-                          elevation: 5.0,
-                          borderRadius: BorderRadius.circular(20),
-                            child: Container(
-                              padding: EdgeInsets.all(14),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                Image.asset("images/salad2.png", height: 150,width: 150, fit: BoxFit.cover,),
-                                Text("Salad", style: AppWidget.SemiBoldTextFieldStyle(),),
-                                SizedBox(height: 5.0 ,),
-                                Text("Fresh and Healthy", style: AppWidget.LightTextFieldStyle(),),
-                                SizedBox(height: 5.0 ,),
-                                Text("\$25", style: AppWidget.SemiBoldTextFieldStyle(),),
-                              ],),
+                      GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> Details()));
+                        },
+                        child: Container(
+                          margin: EdgeInsets.all(4),
+                          child: Material(
+                            elevation: 5.0,
+                            borderRadius: BorderRadius.circular(20),
+                              child: Container(
+                                padding: EdgeInsets.all(14),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                  Image.asset("images/salad2.png", height: 150,width: 150, fit: BoxFit.cover,),
+                                  Text("Salad", style: AppWidget.SemiBoldTextFieldStyle(),),
+                                  SizedBox(height: 5.0 ,),
+                                  Text("Fresh and Healthy", style: AppWidget.LightTextFieldStyle(),),
+                                  SizedBox(height: 5.0 ,),
+                                  Text("\$25", style: AppWidget.SemiBoldTextFieldStyle(),),
+                                ],),
+                              ),
                             ),
-                          ),
+                        ),
                       ),
                       SizedBox(width: 15.0,),
                         Container(

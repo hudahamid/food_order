@@ -26,7 +26,7 @@ class _DetailsState extends State<Details> {
             Image.asset("images/salad2.png",width: MediaQuery.of(context).size.width,height:MediaQuery.of(context).size.height/2.5 ,fit:BoxFit.fill,),
             SizedBox(height: 15.0,),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+             
               children: [
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,13 +35,14 @@ class _DetailsState extends State<Details> {
                      Text("Chickpea salad",style: AppWidget.boldTextFieldStyle(),),
                   ],
                 ),
-
+                Spacer(),
                  Container(  
                   decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(8)),
                  child: Icon(Icons.remove,color: Colors.white,),
                 ), 
+                SizedBox(width: 10.0,),
                 Text("1",style: AppWidget.SemiBoldTextFieldStyle(),),
-
+               SizedBox(width: 10.0,),
                 Container(  
                   decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(8)),
                  child: Icon(Icons.add,color: Colors.white,),

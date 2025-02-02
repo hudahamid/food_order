@@ -9,6 +9,9 @@ import 'package:food_order/widget/widget_support.dart';
 }
 
 class _DetailsState extends State<Details> {
+   int a =1;
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,20 +39,51 @@ class _DetailsState extends State<Details> {
                   ],
                 ),
                 Spacer(),
-                 Container(  
-                  decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(8)),
-                 child: Icon(Icons.remove,color: Colors.white,),
-                ), 
-                SizedBox(width: 10.0,),
-                Text("1",style: AppWidget.SemiBoldTextFieldStyle(),),
-               SizedBox(width: 10.0,),
-                Container(  
-                  decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(8)),
-                 child: Icon(Icons.add,color: Colors.white,),
+                 GestureDetector(
+                  onTap: (){
+                    if(a>1){
+                      --a;
+                    }
+                    
+                    setState(() {
+                      
+                    });
+                  },
+                   child: Container(  
+                    decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(8)),
+                   child: Icon(Icons.remove,color: Colors.white,),
+                                   ),
+                 ), 
+                
+                SizedBox(width: 20.0,),
+                Text(a.toString(),style: AppWidget.SemiBoldTextFieldStyle(),),
+               SizedBox(width: 20.0,),
+               
+                GestureDetector(
+                  onTap: (){
+                    ++a;
+                    setState(() {
+                      
+                    });
+                  },
+                  child: Container(  
+                    decoration: BoxDecoration(color: Colors.black,borderRadius: BorderRadius.circular(8)),
+                   child: Icon(Icons.add,color: Colors.white,),
+                  ),
                 ),
               ],
             ),
-        ],)
+            SizedBox(height: 20.0,),
+            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            maxLines:3 ,
+             style: AppWidget.LightTextFieldStyle(),),
+             SizedBox(height: 30.0,),
+             Row(children: [
+              Text("Delivery Time",style: AppWidget.SemiBoldTextFieldStyle(),),
+              Icon(Icons.alarm, color:Colors.black54 ,)
+             ],)
+        ],
+        )
         ,),
     );
   }

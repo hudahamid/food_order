@@ -80,8 +80,48 @@ class _DetailsState extends State<Details> {
              SizedBox(height: 30.0,),
              Row(children: [
               Text("Delivery Time",style: AppWidget.SemiBoldTextFieldStyle(),),
-              Icon(Icons.alarm, color:Colors.black54 ,)
-             ],)
+              Icon(Icons.alarm, color:Colors.black54 ,),
+              SizedBox(width: 5.0,),
+              Text("30 min" , style:AppWidget.SemiBoldTextFieldStyle(), ),            
+             ],),
+             Spacer(),
+             Padding(
+               padding: const EdgeInsets.only(bottom: 40.0),
+               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(" Total Price" , style:AppWidget.headerTextFieldStyle() ,),
+                     Text(" \$28" , style:AppWidget.SemiBoldTextFieldStyle() ,),
+                ],),
+               Container(
+                 width: MediaQuery.of(context).size.width/2,
+               padding:EdgeInsets.all(8) ,
+                decoration: BoxDecoration(color:Colors.black , borderRadius:BorderRadius.circular(10) ),
+                child: 
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                      Text("Add to cart" , style:TextStyle(color:Colors.white , fontSize: 16.0, fontFamily: 'Poppins' )),
+                     
+                     SizedBox(width:30.0 ,),
+                      Container(
+                       
+                        padding: EdgeInsets.all(3),
+                        decoration: BoxDecoration(
+                          color:Colors.grey , borderRadius: BorderRadius.circular(8)
+                        ),
+                        child: Icon(Icons.shopping_cart_outlined , color: Colors.white),
+                      ),
+                      SizedBox(width:10.0,)
+                    ],),
+               )
+
+
+               ],),
+             ),
         ],
         )
         ,),

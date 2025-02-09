@@ -91,13 +91,15 @@ class _LoGinState extends State<LoGin> {
                               decoration: BoxDecoration(
                                   color: Color(0xffff5722),
                                   borderRadius: BorderRadius.circular(20)),
-                              child: Text(
-                                "LOGIN",
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18.0,
-                                    fontFamily: 'Poppins1',
-                                    fontWeight: FontWeight.bold),
+                              child: Center(
+                                child: Text(
+                                  "LOGIN",
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18.0,
+                                      fontFamily: 'Poppins1',
+                                      fontWeight: FontWeight.bold),
+                                ),
                               ),
                             ),
                           ),
@@ -105,6 +107,8 @@ class _LoGinState extends State<LoGin> {
                       ),
                     ),
                   ),
+                  SizedBox(height: 78.0,),
+                  Text("Donot have an account ? sign up",style: AppWidget.SemiBoldTextFieldStyle(),)
                 ],
               ),
             )
